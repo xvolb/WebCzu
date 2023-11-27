@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+    body {
+      font-family: "Lato", sans-serif;
+    }
+    
+    .sidenav {
+      height: 100%;
+      width: 0;
+      position: fixed;
+      
+      top: 0;
+      left: 0;
+      background-color: #baa8a8;
+      opacity: 0.9;
+      overflow-x: hidden;
+      transition: 0.5s;
+      padding-top: 60px;
+    }
+    .sidenav a {
+      padding: 32px 8px 8px 32px;
+      text-decoration: none;
+      font-size: 25px;
+      color: #100f0f;
+      display: block;
+      transition: 0.3s;
+      box-sizing: border-box;
+    }
+    .active{
+      text-decoration: underline !important;
+    }
+    
+    .sidenav a:hover {
+      color: #f1f1f1;
+    }
+    
+    .sidenav .closebtn {
+      position: absolute;
+      top: 0;
+      right: 25px;
+      font-size: 36px;
+      margin-left: 50px;
+    }
+    
+  .logo{
+    width: 300px;
+    height: 150px;
+  }
+  .rightNav{
+          display: flexbox;
+          float: right;
+          z-index: 1;
+        }
+    .heart, .login {
+          position: absolute;
+          right: 20px;
+          top: 10px;
+          width: 40px;
+          height: 40px;
+          background-size: cover;
+          background-repeat: no-repeat;
+          padding: 0px 0px 0px 0px;
+        }
+        .login{
+            right: 80px;
+        }
+        .rightNav input[type=text] {
+          padding: 6px;
+          margin-top: 8px;
+          font-size: 17px;
+          border: none;
+        }
+
+        .rightNav .search-container button {
+          padding: 6px 10px;
+          z-index: 1;
+          margin-top: 8px;
+          margin-right: 16px;
+          background: #ddd;
+          font-size: 17px;
+          border: none;
+          cursor: pointer;
+        }
+
+        .rightNav .search-container button:hover {
+          background: #ccc;
+        }
+    
+    @media screen and (max-height: 450px) {
+      .sidenav {padding-top: 15px;}
+      .sidenav a {font-size: 18px;}
+    }
+    @media screen and (min-width: 700px){
+        
+        .sidenav{
+            display: flexbox;
+            width: 100%;
+            height: 50px;
+            padding: 10px;
+            background-color: white;
+            
+        }
+        .closebtnBlock{
+            display: none;
+        }
+        .sidenav a{
+            z-index: 1;
+            padding: 15px 20px 0px 20px;
+            text-align: center;
+            float: left;
+            font-size: medium;
+        }
+        .openNav{
+            display: none;
+        }
+        .logo{
+            width: 100px;
+            height: 50px;
+            background: linear-gradient(to bottom, #ff0000, #cc0000);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            padding: 20px 0px 0px 50px;
+            float: left;
+        }
+      }
+        
+
+        
+    
+    </style>
+    </head>
+    <body>
+    <nav>
+        <div id="mySidenav" class="sidenav">
+          <div class="closebtnBlock">
+              <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+          </div>
+        <a href="#" class="logo" style="background-image: url(img/logo-removebg-preview.png);"></a>
+        <a href="#" class="active">Main</a>
+        <a href="#">Buy</a>
+        <a href="#">Reviews</a>
+        <a href="#">About Us</a>
+        <a href="#">Contacts</a>
+      </div>
+      <div class="rightNav">
+        <a href="#" class="login" style="background-image: url(img/user-solid.svg);"></a>
+        <a href="#" class="heart" style="background-image: url(img/heart.svg);"></a>
+          <div class="search-container">
+            <form>
+              <input type="text" placeholder="Search.." name="search">
+              <button type="submit"><i class="fa fa-search"></i></button>
+            </form>
+          </div>
+      </div>
+      
+      <span style="font-size:30px;cursor:pointer" id="openNav" class="openNav" onclick="openNav()">&#9776;</span>
+        
+        
+    </nav>
+    
+    <div></div>
+    
+    
+    
+    <script>
+    function openNav() {
+  var sidenav = document.getElementById("mySidenav");
+  sidenav.style.width = "250px";
+  var openNav = document.getElementById("openNav");
+  openNav.style.display = "none";
+}
+    
+    function closeNav() {
+      var sidenav = document.getElementById("mySidenav");
+      sidenav.style.width = "0";
+      var openNav = document.getElementById("openNav");
+      openNav.style.display = "block";
+
+    }
+    </script>
+       
+    </body>
+    </html> 
+    
